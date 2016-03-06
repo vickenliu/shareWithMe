@@ -39,7 +39,6 @@ group :development, :test do
   gem 'byebug'
 end
 group :production do
-  gem 'pg'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
