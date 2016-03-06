@@ -1,0 +1,35 @@
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation" class="alert alert-warning">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% @item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name,class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.fields_for :genres do |genre| %>
+    <%= render 'genre_fields',f: genre %>
+    <% end %>
+    <%= link_to_add_association 'add genre', f, :genres %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description,class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url %><br>
+    <%= f.text_field :url,class:"form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit class:"btn btn-primary"%>
+  </div>
+<% end %>
