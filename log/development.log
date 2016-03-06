@@ -16140,3 +16140,99 @@ Started GET "/admins/sign_in" for ::1 at 2016-03-02 09:31:00 +1300
 Processing by Devise::SessionsController#new as HTML
   Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
 Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-06 20:45:35 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items"  ORDER BY created_at DESC
+  [1m[36mGenre Load (0.9ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 7]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?  [["item_id", 6]]
+  Rendered items/index.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 677ms (Views: 654.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.self-f4596a574f72a4af0e2b18e354bebfe76e30ec53491df2aef488826a85da14c4.css?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/cocoon.self-ce68891302eecfa38f1fe9f97c2b343f83b7d67cba179b93b75b260f4b67d18e.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/share-715a36d05c642d31f9c6c1262949c36f6ddac94bbf2ceca884a5eb4149f6e032.jpg" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-06 20:45:36 +1300
+
+
+Started GET "/items/6" for ::1 at 2016-03-06 20:45:42 +1300
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?  [["item_id", 6]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."item_id" = ?[0m  [["item_id", 6]]
+  [1m[35mComment Load (0.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."item_id" = ?  [["item_id", 6]]
+  Rendered items/show.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 115ms (Views: 96.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-06 20:45:45 +1300
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"  ORDER BY created_at DESC[0m
+  [1m[35mGenre Load (0.1ms)[0m  SELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?  [["item_id", 7]]
+  [1m[36mGenre Load (0.1ms)[0m  [1mSELECT "genres".* FROM "genres" WHERE "genres"."item_id" = ?[0m  [["item_id", 6]]
+  Rendered items/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.4ms)
