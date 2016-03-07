@@ -34,12 +34,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3'
+
   gem 'byebug'
 end
 group :production do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development do
@@ -52,4 +53,7 @@ group :development do
   gem 'devise', '~> 3.5', '>= 3.5.6'
   gem 'cocoon', '~> 1.2', '>= 1.2.8'
 end
+group :development do 
+    gem 'sqlite3'
+end 
 
