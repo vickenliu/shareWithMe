@@ -49,6 +49,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  gem 'cocoon', '~> 1.2', '>= 1.2.8'
+
 end
   gem 'devise', '~> 3.5', '>= 3.5.6'
+    gem 'cocoon', '~> 1.2', '>= 1.2.8'
