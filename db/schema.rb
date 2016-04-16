@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160301093253) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 20160301093253) do
     t.datetime "updated_at",                          null: false
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
   create_table "comments", force: :cascade do |t|
     t.string   "nickname"
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 20160301093253) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["item_id"], name: "index_comments_on_item_id"
+  add_index "comments", ["item_id"], name: "index_comments_on_item_id", using: :btree
 
   create_table "genres", force: :cascade do |t|
     t.string   "name"
@@ -48,7 +51,7 @@ ActiveRecord::Schema.define(version: 20160301093253) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "genres", ["item_id"], name: "index_genres_on_item_id"
+  add_index "genres", ["item_id"], name: "index_genres_on_item_id", using: :btree
 
   create_table "items", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -58,4 +61,6 @@ ActiveRecord::Schema.define(version: 20160301093253) do
     t.string   "url"
   end
 
+  add_foreign_key "comments", "items"
+  add_foreign_key "genres", "items"
 end
